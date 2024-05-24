@@ -20,7 +20,7 @@
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
-    margin-top: 25rem; /* إضافة مسافة أعلى القسم */
+    margin-top: 25rem; 
 }
 
 .section_header {
@@ -28,7 +28,7 @@
     font-weight: 600;
     color: var(--text-dark);
     text-align: center;
-    margin-bottom: 2rem; /* إضافة مسافة أسفل العنوان */
+    margin-bottom: 2rem; 
 }
 
 .popular_grid {
@@ -90,13 +90,13 @@ img {
     }
 }
 .room-image {
-    height: 300px; /* Définir la hauteur de l'image */
-    object-fit: cover; /* Assurez-vous que l'image s'étend pour couvrir tout le cadre */
-    margin-bottom: 20px; /* Espacement entre l'image et le texte */
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
     margin-top: 80px;
     margin-left: 100px;
   }
   .room-description {
-    text-align: left; /* Aligner le texte à gauche */
+    text-align: left; 
     padding-top: 3.3rem;
   }

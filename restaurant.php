@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Lover</title>
+    <title>Restaurant</title>
     <!--Style Link-->
     <link rel="stylesheet" href="restaurant.css">
 </head>
@@ -11,31 +11,83 @@
     <!-- Header Start -->
     <header>
         <div id="navbar">
-           <img src="./img/logo.png" alt="Food Lover Logo" class="header_image_container">
+            <img src="./img/logo.png" alt="Food Lover Logo">
             <nav>
                 <ul>
-                    <li><a href="#Maison">Home</a></li>
-                    <li><a href="#propos">about</a></li>
+                    
                     <li><a href="#menu">menu</a></li>
-                    <li><a href="#galerie">gallery</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="#galerie">galerie</a></li>
+                   
                 </ul>
             </nav>
         </div>
     
     
     <div class="content">
-        <h1>Bienvenue Au <span claas="primary-text">Restaurant</span></h1>
+        <h1>Bienvenue Au <span claas="primary-text">Restaurant</span>  Des gourmands</h1>
+        <p>Ici vous pouvez trouver la nourriture la plus délicieuse au monde</p>
         <a href="table.php" class="btn btn-primary"> Réserver une Table</a>
     </div>
 </header>
+<style>
+     #offers .offers-items {
+    display: flex;          /* Enables flexbox layout */
+    gap: 200px;              /* Adds 20px of space between items */
+    justify-content: center; /* Center aligns the items */
+}
+#offers h2{
+    margin:50px;
+    text-align:center;
+
+}
+.offers-items > div{
+    margin: 10opx;   /* Adds a 10px margin around each item */
+}
+
+
+        /* Styles for the menu items container */
+        .menu-items {
+       display:flex-sodium_crypto_box;
+          /* Allow items to wrap into multiple rows */
+            justify-content: space-between; 
+            justify:center;
+           
+            gap: 30px; /* Space between menu items */
+           
+        }
+        #menu h2{
+            text-align:center;
+            margin:5px;
+          }
+          #menu      .menu-left, .menu-right {
+            flex: 1; /* Each section takes half the space */
+            border: 1px solid #ccc; /* Border around each section */
+            border-radius: 5px;
+            background-color: white; /* White background */
+            padding: 15px; /* Padding within each section */
+        }
+        
+        
+        
+
+        /* Styles for individual menu items */
+       
+
+        /* Styles for the images */
+        
+        
+
+        /* Hover effect for menu items */
+       
+
+</style>
 <!--Header End-->
 <main>
     <!--Header start-->
     <section id="about">
         <div class="container">
             <div class="title">
-                <h2> Restaurant</h2>
+                <h2> Restaurant  Des  gourmands </h2>
                 <p> </p>
             </div>
             <div class="about-content">
@@ -44,7 +96,7 @@
                     <p></p>
                     <a href="#" class="btn btn-secondary"></a>
                 </div>
-                <img src="./img/about_img.png" alt="pizza"  >
+                <img src="./img/about_img.png" alt="pizza">
             </div>
         </div>
     </section>
@@ -52,100 +104,92 @@
     <!--offers start -->
     <section id="offers">
         <div class="container">
+            
             <div class="title">
-                <h2>Menu spécial</h2>
-                <p></p>
+                <h2>Menu  spécial </h2>
+            
+                
+             
+           
             </div>
             <div class="offers-items">
                 <div>
                     <img src="./img/offer1.png" alt="quattro pasta">
                     <div>
-                        <h3>quattro Pasta</h3>
-                        <p></p>
-                        <p><span class="primary-text">1500DA</span></p>
+                        <h3>Pates Quattro</h3>
+                      
+                        <p><del>500DA</del><span class="primary-text">300DA</span></p>
                     </div>
                 </div>
                 <div>
                     <img src="./img/offer2.png" alt="quattro pasta">
                     <div>
-                        <h3>vegertarian Pasta</h3>
-                        <p></p>
-                        <p><span class="primary-text">2000DA</span></p>
+                        <h3>Pates vegetariennes</h3>
+                        
+                        <p><del>600DA</del><span class="primary-text">$350DA</span></p>
                     </div>
                 </div>
                 <div>
                     <img src="./img/offer3.png" alt="quattro pasta">
                     <div>
-                        <h3>Gluten-Free Pasta</h3>
-                        <p></p>
-                        <p><span class="primary-text">2000DA</span></p>
+                        <h3>Pates sans gorge</h3>
+                       
+                        <p><del>400DA</del><span class="primary-text">250DA</span></p>
                     </div>
                 </div>
+                
+
             </div>
         </div>
+
     </section>
      <!--Header End-->
      <!--offers start -->
      <section id="menu">
         <div class="container">
-           
-                <div class="title">
-                    <h2>Menu </h2>
-                   
-                </div>
-                <div class="menu-items">
-                    <div class="menu-items-left">
-                        <div class="menu-items">
-                            <img src="./img/food1.png" alt="LASAL CHeese">
-                            <div>
-                                <h3>LASAL CHeese <span class="primary-text" >2500DA</span></h3>
-                            </div>
-                            <div class="menu-items">
-                                <div class="menu-items-left">
-                                    <div class="menu-items">
-                                        <img src="./img/food2.png" alt="Jumbo CRAB SMRIMP">
-                                        <div>
-                                            <h3>Jumbo CRAB SMRIMP <span class="primary-text" >2000DA</span></h3>
-                                        </div><div class="menu-items">
-                                            <div class="menu-items-left">
-                                                <div class="menu-items">
-                                                    <img src="./img/food3.png" alt="KOKTAIL JUCIE">
-                                                    <div>
-                                                        <h3>KOKTAIL JUCIE <span class="primary-text" >1000DA</span></h3>
-                                            
-                 </div><div class="menu-items">
-           
-                     <img src="./img/food4.png" alt="CAPO STEAK">
-                      <div>
-          <h3>CAPO STEAK <span class="primary-text" >1300DA</span></h3>
-                                                         
-               </div><div class="menu-items">
-           <div class="menu-items-left">
-           <div class="menu-items">
-           <img src="./img/food5.png" alt="ORGANIC FRUIT SALAD">
-                                                                            <div>
-                                                                                <h3>ORGANIC FRUIT SALAD<span class="primary-text" >1200DA</span></h3>
-                                                                            </div>
-                                                                            <div class="menu-items">
-                                                                                <div class="menu-items-right">
-                                                                            <div class="menu-items">
-                                                                                <img src="./img/food6.png" alt="CHEESE PIZZA">
-                                                                                <div>
-                                                                                    <h3>CHEESE PIZZA<span class="primary-text" >2000DA</span></h3>
-                                                                          
-                                                                            
+            <div class="title">
+          <h2>Menu </h2>
         
-        </div>
+          </div>
+          <?php
+          // Database connection
+              $con = mysqli_connect("localhost", "root", "", "hotel");
 
-                        <dev>
-                        </div>
+              if (!$con) {
+                  die("Connection failed: " . mysqli_connect_error());
+              }
+                $query = "SELECT * FROM menu";
+                    $result = mysqli_query($con, $query);
 
-                    </div>
-                </div>
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            $imagePath = 'img/' . $row['image'];
+                            echo "
+                            <div>
+                                <img src=\"$imagePath\" alt=\"{$row['type']}\">
+                                <div>
+                                    <h3>{$row['type']} <span class=\"primary-text\">{$row['prix']}DA</span></h3>
+                                   
+                                </div>
+                            </div>
+                            ";
+                        }
+                          // Close database connection
+                    mysqli_close($con);
+                    }
+
+                
+                ?>
+                <div class="menu-items">
+                    
+                   
+                <div class="menu-items-left">
+                    
+  </div>
         </div>
      </section>
      <!--Header End-->
 </main>
     
 </body>
-</html>
+</html>                

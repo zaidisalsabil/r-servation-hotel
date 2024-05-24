@@ -2,74 +2,84 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
-    $email = $_POST['Email'];  
+    $email = $_POST['Email'];
     $date = $_POST['date'];
     $temps = $_POST['temps'];
     $nbr_persn = $_POST['nbr_persn'];
+    $type_plat = isset($_POST['food_types']) ? implode(', ', $_POST['food_types']) : '';
+
     $con = mysqli_connect("localhost", "root", "", "hotel");
     if (!$con) {
         die("Erreur de connexion : " . mysqli_connect_error());
     }
 
-    $sql = "INSERT INTO `réstaurant`(`nom`, `prenom`, `email`, `date`, `temps`, `nbr_persn`) 
-            VALUES ('$nom','$prenom','$email','$date','$temps','$nbr_persn')";
-            echo $sql;
+    $sql = "INSERT INTO `réstaurant`(`nom`, `prenom`, `email`, `date`, `temps`, `nbr_persn`, `plat_types`) 
+            VALUES ('$nom', '$prenom', '$email', '$date', '$temps', '$nbr_persn', '$type_plat')";
 
     if (mysqli_query($con, $sql)) {
-        echo "<script> alert(' réservation réussie.'); </script>";
-
-        
-        if(isset($_POST['type_plat'])){
-            $type_plat = $_POST['type_plat'];
-            foreach($type_plat as $plat){
-                $sql2 = "INSERT INTO `menu`(`type_plat`) VALUES ('$plat')";
-                if (mysqli_query($con, $sql2)) {
-                    echo "Ajouté avec succès";
-                } else {
-                    echo "Erreur lors de l'ajout : " . mysqli_error($con);
-                }
-            }
-        }
+        echo "<script> alert('Réservation réussie.'); </script>";
     } else {
         echo "Erreur lors de l'ajout : " . mysqli_error($con);
     }
-    
+
     mysqli_close($con);
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Réserver votre table</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-<h2 class="Réser">Réserver votre table</h2>
+    <h2 class="Réser">Réserver votre table</h2>
     <form action="table.php" method="POST">
         <label for="nom">Nom</label><br>
         <input type="text" id="nom" name="nom" required><br>
+        
         <label for="prenom">Prenom</label><br>
         <input type="text" id="prenom" name="prenom" required><br>
+        
         <label for="Email">Email</label><br>
         <input type="email" id="Email" name="Email" required><br>
+        
         <label for="date">Date</label><br>
         <input type="date" id="date" name="date" required><br>
+        
         <label for="temps">Temps</label><br>
         <input type="time" id="temps" name="temps" required><br>
-       
+        
         <label for="nbr_persn">Nombre de personnes</label><br>
-        <input type="number" id="nbr_persn" name="nbr_persn" required><br><br>
-        <label for="type_plat" name="type_plat" required>Type de plat</label ><br>
-        <input type="checkbox" name="food_types[]" value="soup"> شوربة<br>
-        <input type="checkbox" name="food_types[]" value="drink"> مشروب<br>
-        <input type="checkbox" name="food_types[]" value="main_dish"> طبق رئيسي<br>
-        <input type="checkbox" name="food_types[]" value="dessert"> حلويات<br><br>
-        <input type="submit" value="réserver">
-        </form>
+        <input type="number" id="nbr_persn" name="nbr_persn" required><br>
+        
+        <label for="type_plat">Type de plat</label><br>
+        <?php
+        $con = mysqli_connect("localhost", "root", "", "hotel");
+        if (!$con) {
+            die("Erreur de connexion : " . mysqli_connect_error());
+        }
 
-<style>
+        $query = "SELECT DISTINCT `type` FROM `menu`";
+        $result = mysqli_query($con, $query);
+
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                echo "<input type='checkbox' name='food_types[]' value='" . $row['type'] . "'> " . $row['type'] . "<br>";
+            }
+            mysqli_free_result($result);
+        } else {
+            echo "Error: " . mysqli_error($con);
+        }
+
+        mysqli_close($con);
+        ?><br>
+        
+        <input type="submit" value="Réserver">
+    </form>
+
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -120,9 +130,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             text-align: center;
         }
     </style>
-                
-        
-
-
 </body>
 </html>

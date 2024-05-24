@@ -133,11 +133,12 @@ img{
     font-size: 1.5rem;
     color: var(--white);
     background-color: var(--primary-color);
-    border-radius: 100%;
+    border-radius: 50% ;
     cursor: pointer;
     transition: 0.3s;
 
 }
+
 .Beni-hamad_container .btn:hover {
     background-color: var(--primary-color-dark);
 }

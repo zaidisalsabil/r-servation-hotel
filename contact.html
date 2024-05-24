@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-color: Beige; /* Chiffon Lemon */
+            color: black;
+        }
+        .contact {
+            padding: 50px 0;
+        }
+        .contact .content {
+            max-width: 800px;
+            text-align: center;
+            margin: 0 auto 50px;
+        }
+        .contact .content h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: black;
+            margin-bottom: 20px;
+        }
+        .contact .content p {
+            font-weight: 300;
+            color: #666;
+        }
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .container .contactInfo {
+            width: 300px;
+        }
+        .container .contactInfo .box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .container .contactInfo .box .icon {
+            min-width: 60px;
+            height: 60px;
+            background: PeachPuff; /* Chiffon Lemon */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            font-size: 22px;
+            margin-right: 20px;
+        }
+        .container .contactInfo .box .text {
+            flex: 1;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box .text h3 {
+            font-weight: 500;
+            color:SlateGray;
+            margin-bottom: 5px;
+           
+        }
+        .contactform {
+            width: 40%;
+            padding: 40px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contactform h2 {
+            font-size: 30px;
+            color: #333;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .contactform .inputBox {
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactform .inputBox input, .contactform .inputBox textarea {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+        .contactform .inputBox span {
+            position: absolute;
+            left: 0;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+        .contactform .inputBox input:focus ~ span,
+        .contactform .inputBox input:valid ~ span,
+        .contactform .inputBox textarea:focus ~ span,
+        .contactform .inputBox textarea:valid ~ span {
+            color: bisque;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+        .contactform .inputBox input[type="submit"] {
+            width: 100px;
+            background:PeachPuff;
+            color: black;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Contactez-Nous</h2>
+            <p>Pour toute question ou demande d'information supplémentaire, n'hésitez pas à nous contacter. Nous sommes là pour vous aider et nous ferons de notre mieux pour répondre rapidement à vos besoins.</p>
+
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Rue Frantz Fanon Bordj Bou Arreridj, Algérie</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="bi bi-telephone"></i></div>
+                    <div class="text">
+                        <h3>Téléphone</h3>
+                        <p>+213 (0) 35 69 02 02 / +213 (0) 35 69 03 03 / +213 (0) 35 69 04 04</p>
+                        <p>+213 (0) 35 69 00 11</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="bi bi-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>info@hotel-benihamad.dz</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactform">
+                <form>
+                    <h2>Envoyer Message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Nom</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required"></textarea>
+                        <span> Message</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Envoyer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

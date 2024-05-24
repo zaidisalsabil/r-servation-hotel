@@ -47,14 +47,8 @@ a{
 /* Header Start */
 header{
     height:100vh;
-    background: url('./img/home_bg.jpeg') center center/cover no-repeat;
+    background: url('./img/home_bg.jpeg')center center/cover no-repeat;
     position: relative;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    height: 1000px;
-    
 }
 
 #navbar {
@@ -123,12 +117,26 @@ header *{
 
 #about .title,
 #offers .title
-#menu .title{
+#menu .title {
     text-align: center;
 margin-bottom: 4rem ;
 
 }
+ #offers .offers-items {
+    display: flex;          /* Enables flexbox layout */
+    gap: 20px;              /* Adds 20px of space between items */
+    justify-content: center; /* Center aligns the items */
+}
+.offers-items > div{
+    margin: 10opx;   /* Adds a 10px margin around each item */
+}
 
+
+
+   
+
+
+ 
 
 #about h2 ,
 #offer h2
