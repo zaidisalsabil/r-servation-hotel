@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Tariffs</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="bar.css">
+  <style>
+    :root {
+      --dark-color: rgb(247, 244, 241);
+      --green-color: hsla(0, 20%, 94%, 0.67);
+    }
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+    /* Start Navbar */
+    .navbar {
+      background-color: var(--dark-color);
+    }
+    .navbar .navbar-nav .nav-link {
+      color: rgb(69, 67, 67);
+    }
+    .navbar .navbar-nav .nav-link.active,
+    .navbar .navbar-nav .nav-link:focus,
+    .navbar .navbar-nav .nav-link:hover {
+      color: var(--green-color);
+    }
+    .container {
+      padding: 50px 0;
+    }
+    .navbar-brand {
+      color: brown;
+    }
+    /* End Navbar */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    html, body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: white;
+    height: 100%;
+}
+
+
+
+    .container h1 {
+      color: black;
+      font-size: 32px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .price-row {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 25px;
+    }
+    .price-col {
+      background-color: hsla(0, 20%, 94%, 0.67);
+      color: black;
+      padding: 15%;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .price-col h3 {
+      margin: 10px 0;
+    }
+    .price-col ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .price-col ul li {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/logo d'hotel.png" width="90" height="60" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" aria-current="page" href="#">Accueil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-lg-3" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Services & loisirs
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Les chambres</a></li>
+              <li><a class="dropdown-item" href="restaurant.php">Restaurant</a></li>
+              <li><a class="dropdown-item" href="réunion.php">Salle de réunion</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="tarifs.html">Tarifs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+  <div class="container">
+    <h1>Tarifs des Chambres</h1>
+    <div class="price-row">
+      <div class="price-col">
+        <p>Single</p>
+        <h3>9600.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>Séjour confortable</li>
+          <li>Sécurité accrue</li>
+        </ul>
+      </div>
+      <div class="price-col">
+        <p>Double</p>
+        <h3>13 400.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>Belle vue</li>
+          <li>Lit double</li>
+        </ul>
+      </div>
+      <div class="price-col">
+        <p>Suite/J/Single</p>
+        <h3>13 900.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>Petit bureau pour travailler</li>
+          <li>Petit réfrigérateur et bouilloire électrique</li>
+        </ul>
+      </div>
+      <div class="price-col">
+        <p>Suite/J/Double</p>
+        <h3>17 400.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>La suite offre plus d'espace que les chambres standard</li>
+          <li>Salle de bain privée avec chaînes par satellite ou services de streaming</li>
+        </ul>
+      </div>
+      <div class="price-col">
+        <p>Suite/S/Single</p>
+        <h3>17 000.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>Lit individuel de grande taille et de haute qualité</li>
+          <li>Salle de bain privée luxueuse</li>
+        </ul>
+      </div>
+      <div class="price-col">
+        <p>Suite/S/Double</p>
+        <h3>20 800.00 DA</h3>
+        <ul>
+          <li>Wi-Fi gratuit</li>
+          <li>Petite cuisine</li>
+          <li>Salon avec TV à écran large</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+  <!-- Bootstrap JS and dependencies -->
+  <script src="js/popper.min js.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>
+

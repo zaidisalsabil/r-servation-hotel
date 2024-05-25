@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="bar.css">
+</head>
+<body>
+    <iframe src="nav.html" width="102%" height="70px" frameborder="0"></iframe>
+ 
+    <div class="container my-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <img src="images/ch2.jpg" alt="Image de la Chambre" class="room-image-1">
+          </div>
+          <div class="col-lg-4">
+            <h1 >Chambre single</h1>
+            <p>Cette chambre individuelle offre un design luxueux et confortable avec une vue imprenable sur la ville.</p>
+            <h3>Caractéristiques :</h3>
+            <ul>
+              <li>Lit confortable</li>
+              <li>Télévision à écran plat</li>
+              <li>Wi-Fi haut débit</li>
+              <li>Zone de détente confortable</li>
+              <li>Salle de bains privative avec douche et baignoire</li>
+            </ul>
+            <h2>Prix : 200 $ / nuit</h2>
+            
+          </div>
+        </div>
+      </div>
+    
+      
+       
+    <div class="container my-5">
+        <div class="row">
+          <div class="col-lg-8">
+            <img src="images/chmbre1.jpg" alt="Image de la Chambre" class="room-image">     
+            <img src="images/Hotel-beni-hamad-2.webp" alt="Image de la Chambre" class="room-image">
+            
+          </div>
+          <div class="col-lg-4">
+            <h1 >Suite Luxueuse</h1>
+            <p>Cette suite spacieuse offre un espace confortable pouvant accueillir plusieurs personnes, idéal pour les familles ou les groupes d'amis.</p>
+            <h3>Caractéristiques :</h3>
+            <ul>
+              <li>Lits confortables pour plusieurs personnes</li>
+              <li>Plusieurs espaces de détente</li>
+              <li>Vue panoramique sur la ville</li>
+              <li>Wi-Fi haut débit</li>
+              <li>Salle de bains privative avec douche et baignoire</li>
+            </ul>
+            <h2>Prix : À partir de 300 $ / nuit</h2>
+    
+           
+          </div>
+        </div>
+      </div>
+      <div>
+      <div class="container mt-5" width="50px" height="50px">
+        <h2 class="text-center mb-4">Réservez votre séjour</h2>
+        <form action="Réser.php" method="post">
+            <div class="row"  >
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="nom">Nom:</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prenom:</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse">adress:</label>
+                        <input type="text" class="form-control" id="adresse" name="adress" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone">Telephone:</label>
+                        <input type="tel" class="form-control" id="telephone" name="telephone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone">email:</label>
+                        <input type="tel" class="form-control" id="email" name="email" required>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="date_arrivee">Date darrive:</label>
+                     <input type="date" class="form-control" id="date_darrive" name="date_darrive" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date_depart">Date_depart:</label>
+                        <input type="date" class="form-control" id="date_depart" name="date_depart" required>
+                    </div>
+             
+                </div>
+                <div class="form-group">
+                    <label for="type_chambre">Type :</label>
+                    <select class="form-control" id="type" name="type" required>
+                        <option value="Choisissez le type de chambre">Choisissez le type de chambre</option>
+                        <option value="single">Chambre single</option>
+                        <option value="double">Chambre double</option>
+                        <option value="suite_junior_single">Suite Junior single</option>
+                        <option value="suite_junior_double">Suite Junior double</option>
+                        <option value="suite_senior_single">Suite Senior single</option>
+                        <option value="suite_senior_double">Suite Senior double</option>
+                    </select>
+                </div>
+        </div>
+            <button type="submit" class="btn btn-primary btn-block">Réserver</button>
+        </form>
+    </div>
+</div>
+
+      <!-- Footer -->
+      <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+          <p>Tous droits réservés &copy; 2024</p>
+        </div>
+      </footer>
+
+
+
+    <script src="js/popper.min js.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

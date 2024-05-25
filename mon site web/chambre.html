@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="chambre.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="images/logo d'hotel.png" width="90" height="60" alt="Logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" aria-current="page" href="indexx.php">Accueil</a>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-lg-3" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+              Services & loisirs
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="chambre.html">Les chambres</a></li>
+              <li><a class="dropdown-item" href="restaurant.php">Restaurant</a></li>
+              <li><a class="dropdown-item" href="réunion.php">Salle de réunion</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="tarifs.html">Tarifs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-lg-3" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+      <div class="container mt-4">
+        <div class="row">
+          <!-- Affichage de l'image à gauche -->
+          <div class="col-md-6 order-md-2">
+            <img src="images/cv.webp" class="img-fluid room-image" alt="">
+           
+          </div>
+          <!-- Affichage de la description et du formulaire de réservation à droite -->
+          <div class="col-md-6 room-description order-md-1">
+            <h2 data-i18n="meeting_room"></h2> <br>
+            <p data-i18n="meeting_room_description">
+              L'<b>hotel BENI-HAMAD</b> est un établissement de niveau international, vous
+                offre le luxe et le confort de ses 60 chambres réparties entre grand lit et deux lits séparés
+
+                Toutes les chambres sont spacieuses avec une superficie qui varie entre  22 m carré et 26 m carré inclus la salle de bain. équipées de l’air 
+                conditionnée et chauffage centrale a réglage individuel , télévision par satellite , téléphone a ligne directe international , mini- bar équipé , 
+                Access internet ,coffre fort privé , salle de bain avec  baignoire
+            </p>
+          </div>
+        </div>
+      </div>
+
+<section class="section_container popular_container">
+    <h2 class="section_header" data-i18n="our_services">Suites & Chambres</h2>
+    <div class="popular_grid">
+        <div class="popular_card">
+            <img src="images/sig.jpg" alt="popular hotel" height="280">
+            <div class="popular_content">
+                <div class="popular_card_header">
+                    <h4 data-i18n="room">Chambre Single</h4>
+                </div>
+                <p> 
+                   Notre chambre single offre un refuge confortable et adapté pour le voyageur seul. 
+                    Dotée d'un design moderne et d'un mobilier confortable, 
+                    elle est idéale pour un court séjour ou un voyage d'affaires. 
+                    Profitez du calme et du confort avec toutes les commodités nécessaires.</p>
+            </div>
+        </div>
+        <div class="popular_card">
+            <img src="images/Hotel-beni-hamad-2.webp" alt="popular hotel" height="280">
+            <div class="popular_content">
+                <div class="popular_card_header">
+                    <h4 data-i18n="meeting_room">Chambre Double</h4>
+                </div>
+                <p> 
+                  Notre chambre double propose un espace spacieux et un confort double pour les voyageurs. Avec deux lits luxueux et un design élégant, 
+                  cette chambre est parfaite pour les amis ou les couples recherchant 
+                  un séjour confortable et agréable. Vivez une expérience unique de luxe et de confort.</p>
+            </div>
+        </div>
+        <div class="popular_card">
+            <img src="images/hé.jfif" alt="popular hotel" height="280">
+            <div class="popular_content">
+                <div class="popular_card_header">
+                    <h4 data-i18n="restaurant"> Chambre Suite</h4>
+                </div>
+                <p>
+                  Notre suite combine luxe et espace généreux pour offrir un séjour inoubliable. Avec un salon séparé et une chambre à coucher luxueuse, 
+                  la suite offre une expérience de séjour de premier ordre. 
+                  Profitez du maximum de confort et d'intimité avec des services exceptionnels et un design élégant."
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    
+  <script src="nav.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</body>
+</html>

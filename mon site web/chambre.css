@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #2c3855;
+    --primary-color-dark: #435681;
+    --text-dark: #333333;
+    --text-light: #767268;
+  
+    --max-width: 1200px;
+}
+body{
+    background-color: white;
+}
+* {
+   
+    box-sizing: border-box;
+   
+}
+
+.section_container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+    margin-top: 25rem; 
+}
+
+.section_header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 2rem; 
+}
+
+.popular_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.popular_card {
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.popular_content {
+    padding: 1rem;
+}
+
+.popular_card_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.popular_card_header h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.popular_content p {
+    color: var(--text-light);
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.a {
+    text-decoration: none;
+    color: #435681;
+}
+
+@media (max-width: 900px) {
+    .popular_grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .popular_grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.room-image {
+    height: 300px; 
+    object-fit: cover; 
+    margin-bottom: 20px; 
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+  .room-description {
+    text-align: left; 
+    padding-top: 3.3rem;
+  }
